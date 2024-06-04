@@ -1,17 +1,12 @@
-import my_graph
-import pickle
-import random
+def test_case1(expected_output):
 
-def test_bridge():
-    # i_path, i_filename = getArgs()
-    g = my_graph.graph('test.txt')  # 读取时自动生成图 —— 需求1
-    with open('data.pkl', 'wb') as f0:
-        pickle.dump(g, f0)
+    actual_output=wander('to')
+    assert actual_output == expected_output
 
-    print('test3: please input 2 words:\n')
-    word1 = input('word1:\n')
-    word2 = input('word2:\n')
-    g.get_bridge_words(word1, word2)  # 输出桥接词 —— 需求3
-    print()
+def test_case2(expected_output):
+    actual_output = wander('of')
+    assert actual_output == expected_output
 
-
+def test_case3(expected_output):
+    actual_output = wander('new')
+    assert actual_output == expected_output
